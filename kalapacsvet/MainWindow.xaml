@@ -1,0 +1,40 @@
+﻿<Window x:Class="kalapacsvet.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kalapacsvet"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
+            <TextBlock Text="Válasszon atlétát:" VerticalAlignment="Center"/>
+            <ComboBox x:Name="athleteComboBox" Width="200px" Margin="5" SelectionChanged="athleteComboBox_SelectionChanged"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Margin="10">
+            <TextBlock Text="Csoport:"/>
+            <Label x:Name="lbCsoport" Margin="0,5,0,10"/>
+
+            <TextBlock Text="Nemzet:"/>
+            <Label x:Name="lbOrszag" Margin="0,5,0,10"/>
+
+            <TextBlock Text="Nemzet Kód:"/>
+            <Label x:Name="lbNemzet" Margin="0,5,0,10"/>
+
+            <TextBlock Text="Sorozat:"/>
+            <Label x:Name="lbOrder" Margin="0,5,0,10"/>
+
+            <TextBlock Text="Eredmény:"/>
+            <Label x:Name="lbEredmeny" Margin="0,5,0,10"/>
+
+            <Image x:Name="imgKep" Width="300px" HorizontalAlignment="Left" Height="300px" Margin="0,10,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>
